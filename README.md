@@ -5,7 +5,7 @@ An end-to-end machine learning system that combines **customer purchase predicti
 The project is designed for e-commerce scenarios where businesses want to predict whether a customer is likely to purchase and recommend similar products based on historical purchasing behavior.
 
 ---
-App URL:https://8bjxxckibiyotaoavvbebm.streamlit.app/
+App URL:https://productrecomendation.pages.dev/
 ## 📌 Project Overview
 ##API URL=https://product-recomendation-and-customer-purchase-syestem.fastapicloud.dev/
 This project consists of two major machine learning components:
