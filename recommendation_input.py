@@ -2,17 +2,15 @@ from pydantic import BaseModel, Field
 
 
 class RecommendationInput(BaseModel):
-
-    stock_code: str = Field(
+    product_name: str = Field(
         ...,
-        description="Product StockCode used to generate similar product recommendations",
-        examples=["85123A"]
+        min_length=1,
+        description="Exact product description"
     )
 
     n: int = Field(
-        10,
+        default=10,
         ge=1,
         le=50,
-        description="Number of products to recommend",
-        examples=[10]
+        description="Number of recommendations"
     )
