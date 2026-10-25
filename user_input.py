@@ -3,95 +3,107 @@ from typing import Annotated, Literal
 
 
 class UserInput(BaseModel):
-
     Administrative: Annotated[
         int,
         Field(
             ...,
+            ge=0,
             description="Number of administrative pages visited",
-            examples=[2]
-        )
+            examples=[2],
+        ),
     ]
 
     Administrative_Duration: Annotated[
         float,
         Field(
             ...,
+            ge=0,
             description="Time spent on administrative pages",
-            examples=[50.5]
-        )
+            examples=[50.5],
+        ),
     ]
 
     Informational: Annotated[
         int,
         Field(
             ...,
+            ge=0,
             description="Number of informational pages visited",
-            examples=[1]
-        )
+            examples=[1],
+        ),
     ]
 
     Informational_Duration: Annotated[
         float,
         Field(
             ...,
+            ge=0,
             description="Time spent on informational pages",
-            examples=[20.0]
-        )
+            examples=[20.0],
+        ),
     ]
 
     ProductRelated: Annotated[
         int,
         Field(
             ...,
+            ge=0,
             description="Number of product-related pages visited",
-            examples=[30]
-        )
+            examples=[30],
+        ),
     ]
 
     ProductRelated_Duration: Annotated[
         float,
         Field(
             ...,
+            ge=0,
             description="Time spent on product-related pages",
-            examples=[800.5]
-        )
+            examples=[800.5],
+        ),
     ]
 
     BounceRates: Annotated[
         float,
         Field(
             ...,
-            description="Bounce rate",
-            examples=[0.02]
-        )
+            ge=0,
+            le=1,
+            description="Bounce rate (between 0 and 1)",
+            examples=[0.02],
+        ),
     ]
 
     ExitRates: Annotated[
         float,
         Field(
             ...,
-            description="Exit rate",
-            examples=[0.04]
-        )
+            ge=0,
+            le=1,
+            description="Exit rate (between 0 and 1)",
+            examples=[0.04],
+        ),
     ]
 
     PageValues: Annotated[
         float,
         Field(
             ...,
+            ge=0,
             description="Page value",
-            examples=[5.5]
-        )
+            examples=[5.5],
+        ),
     ]
 
     SpecialDay: Annotated[
         float,
         Field(
             ...,
-            description="Special day closeness",
-            examples=[0.0]
-        )
+            ge=0,
+            le=1,
+            description="Special day closeness (between 0 and 1)",
+            examples=[0.0],
+        ),
     ]
 
     Month: Annotated[
@@ -99,65 +111,67 @@ class UserInput(BaseModel):
         Field(
             ...,
             description="Month",
-            examples=["May"]
-        )
+            examples=["May"],
+        ),
     ]
 
     OperatingSystems: Annotated[
         int,
         Field(
             ...,
-            examples=[2]
-        )
+            ge=1,
+            description="Operating system category",
+            examples=[2],
+        ),
     ]
 
     Browser: Annotated[
         int,
         Field(
             ...,
-            examples=[1]
-        )
+            ge=1,
+            description="Browser category",
+            examples=[1],
+        ),
     ]
 
     Region: Annotated[
         int,
         Field(
             ...,
-            examples=[1]
-        )
+            ge=1,
+            description="Region category",
+            examples=[1],
+        ),
     ]
 
     TrafficType: Annotated[
         int,
         Field(
             ...,
-            examples=[2]
-        )
+            ge=1,
+            description="Traffic source category",
+            examples=[2],
+        ),
     ]
 
     VisitorType: Annotated[
         str,
         Field(
             ...,
-            examples=["Returning_Visitor"]
-        )
+            description="Visitor type",
+            examples=["Returning_Visitor"],
+        ),
     ]
 
     Weekend: Annotated[
         bool,
         Field(
             ...,
-            examples=[False]
-        )
+            description="Whether the visit occurred on a weekend",
+            examples=[False],
+        ),
     ]
-
-
-# ============================================================
-# PREDICTION REQUEST
-# ============================================================
-
-class PredictionRequest(UserInput):
-
     model_name: Literal[
         "Best Model",
         "Logistic Regression",
@@ -165,8 +179,6 @@ class PredictionRequest(UserInput):
         "Random Forest",
         "Gradient Boosting",
         "XGBoost",
-        "All Models"
-    ] = Field(
-        default="Best Model",
-        description="Machine learning model to use"
-    )
+        "All Models",
+    ] = "Best Model"
+
