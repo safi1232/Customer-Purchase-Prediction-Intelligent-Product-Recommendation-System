@@ -9,3 +9,4 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+https://productrecomendation.pages.dev/
