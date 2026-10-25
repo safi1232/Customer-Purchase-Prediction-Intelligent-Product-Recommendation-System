@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(
 
 MODEL_PATH = os.path.join(
     BASE_DIR,
-    "model/customer_purchase_recommendation.pkl"
+    "customer_purchase_recommendation.pkl"
 )
 
 
