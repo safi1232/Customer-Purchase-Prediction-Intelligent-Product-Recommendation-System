@@ -7,7 +7,7 @@ The project is designed for e-commerce scenarios where businesses want to predic
 ---
 App URL:https://8bjxxckibiyotaoavvbebm.streamlit.app/
 ## 📌 Project Overview
-
+##API URL=https://product-recomendation-and-customer-purchase-syestem.fastapicloud.dev/
 This project consists of two major machine learning components:
 
 ### 1. Customer Purchase Prediction
