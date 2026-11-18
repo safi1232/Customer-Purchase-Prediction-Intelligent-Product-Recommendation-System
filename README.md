@@ -6,9 +6,7 @@ The project is designed for e-commerce scenarios where businesses want to predic
 
 ---
 
-# App URL
-https://isnght-5gbcupz34-acme-4a68.vercel.app
-# 📌 Project Overview
+
 # API URL
 https://product-recomendation-and-customer-purchase-syestem.fastapicloud.dev/
 
