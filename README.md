@@ -5,9 +5,8 @@ An end-to-end machine learning system that combines **customer purchase predicti
 The project is designed for e-commerce scenarios where businesses want to predict whether a customer is likely to purchase and recommend similar products based on historical purchasing behavior.
 
 ---
+
 # App URL
-https://productrecomendation.pages.dev
-# Alternate URL
 https://isnght-5gbcupz34-acme-4a68.vercel.app
 # 📌 Project Overview
 # API URL
